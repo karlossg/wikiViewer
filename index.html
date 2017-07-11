@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Simple Wikipedia Viewer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
+</head>
+
+<body>
+    <main class="container">
+
+
+        <div class="input">
+            <h1>Simple Wikipedia Viewer</h1>
+            <input id="search" type="text" placeholder="Wikipedia search">
+            <button id="btn-search" type="button" onclick="search()">Search</button>
+            <button type="button" onclick="window.open(href='https://en.wikipedia.org/wiki/Special:Random', '_blank')">Random</button>
+        </div>
+
+        <div id="searchResults"></div>
+    </main>
+
+    <footer class="footer">
+        <p>Created by <a href="https://github.com/karlossg" target="_blank"> Karol Grabowski</a> | 2017</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
