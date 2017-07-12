@@ -17,11 +17,13 @@ function search() {
 
       for (i = 0; i <= pageId.length - 1; i++) {
         var title = response.query.pages[pageId[i]].title;
-        var wikiLink = '<a href="https://en.wikipedia.org/?curid=' + pageId[i] 
-        + '" target="_blank">' + title + '</a>';
-        document.getElementById('searchResults').innerHTML += '<div class="results">'
-        + wikiLink + ' - ' + response.query.pages[pageId[i]].extract + '<br>' + '</div>';
+        var wikiLink = '<a href="https://en.wikipedia.org/?curid=' + pageId[i] +
+          '" target="_blank">' + title + '</a>';
+        document.getElementById('searchResults').innerHTML += '<div class="results">' +
+          wikiLink + ' - ' + response.query.pages[pageId[i]].extract + '<br>' + '</div>';
+        searchInput = '';
       }
+    clearFields();
     });
   }).catch(function (err) {
     console.log('We got an error! :(', err);
@@ -35,3 +37,7 @@ document.getElementById("search")
       document.getElementById("btn-search").click();
     }
   });
+
+function clearFields() {
+  document.getElementById("search").value = "";
+}
